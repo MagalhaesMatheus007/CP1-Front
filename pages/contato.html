@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TripWay | Contato</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet">
+</head>
+<body style="font-family: Poppins;">
+
+    <nav>
+        <a href="../index.html">Home</a>
+    </nav>
+
+    <main>
+        <section>
+
+            <h1>Entre em contato</h1>
+            <img src="../images/banner-contato.png" 
+            alt="Pessoa planejando viagem" 
+            style="width:100%; max-width:800px;">
+            <p>Preencha os dados para montar sua viagem ideal.</p>
+
+            <form>
+                <div>
+                    <label for="nome">Nome</label><br>
+                    <input type="text" id="nome" placeholder="Seu nome" required>
+                </div>
+                
+                <br>
+
+                <div>
+                    <label for="email">E-mail</label><br>
+                    <input type="email" id="email" placeholder="seu@email.com" required>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="tipo">Tipo de viagem</label><br>
+                    <select id="tipo">
+                        <option value="">Selecione</option>
+                        <option value="nacional">Nacional</option>
+                        <option value="internacional">Internacional</option>
+                    </select>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="nacional">Destino (Nacional)</label><br>
+                    <select id="nacional">
+                        <option value="">Selecione um estado</option>
+                        <option>Belém</option>
+                        <option>Fortaleza</option>
+                        <option>Manaus</option>
+                        <option>Brasília</option>
+                        <option>Recife</option>
+                        <option>Belo Horizonte</option>
+                        <option>Salvador</option>
+                        <option>Curitiba</option>
+                        <option>Rio de Janeiro</option>
+                        <option>Porto Alegre</option>
+                        <option>São Paulo</option>
+                    </select>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="internacional">Destino (Internacional)</label><br>
+                    <select id="internacional">
+                        <option value="">Selecione um Páis</option>
+                        <option>França</option>
+                        <option>Japão</option>
+                        <option>Itália</option>
+                        <option>Austrália</option>
+                        <option>Egito</option>
+                        <option>Canadá</option>
+                        <option>Argentina</option>
+                        <option>Alemanha</option>
+                        <option>Holanda</option>
+                        <option>Grécia</option>
+                        <option>Portugal</option>
+                        <option>Tailândia</option>
+                    </select>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="data">Data da viagem</label><br>
+                    <input type="date" id="data" required>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="pessoas">Quantidade de pessoas</label><br>
+                    <input type="number" id="pessoas" placeholder="Ex: 2" required>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" placeholder="Digite sua mensagem..." required></textarea>
+                </div>
+
+                <br>
+
+                <button type="submit">Enviar</button>
+            </form>
+
+            <br>
+
+            <a href="../index.html">Voltar para Home</a>
+        </section>
+    </main>
+    
+</body>
+</html>
