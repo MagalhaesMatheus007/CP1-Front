@@ -1,6 +1,6 @@
 # CP1-Front
 
-integrantes:
+integrantes da cp:
 
 - Matheus Magalhães 
 RM: 573371
