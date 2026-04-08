@@ -1,9 +1,6 @@
 # CP1-Front
 
-integrantes da cp:
+## Integrantes
 
-- Matheus Magalhães 
-RM: 573371
-
-- Fabio Almeida
-Rm: 572642 
+- Matheus Magalhães — RM: 573371
+- Fabio Almeida — RM: 572642
