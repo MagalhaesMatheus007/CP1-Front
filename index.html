@@ -1,66 +1,68 @@
 <!DOCTYPE html>
-<html lang="PT-br">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TripWay</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-<body style="font-family: Poppins;">
-    
-    
+<body>
 
-    <header>
-        <h1>TripWay</h1>
-        <p>Descubra o destino ideal para a sua próxima viagem</p>
-
-
-        <nav>
-
-        <a href="index.html">TripWay</a>
-        
-        <ul>
-            <li><a href="pages/destinos.html">Destinos</a></li>
-            <li><a href="pages/pacotes.html">Pacotes</a></li>
-            <li><a href="pages/contato.html">Contato</a></li>
-        </ul>
-
-    </nav>
+    <header class="main-header">
+        <div class="header-container">
+            <h1 class="logo">TripWay</h1>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="pages/destinos.html">Destinos</a></li>
+                    <li><a href="pages/pacotes.html">Pacotes</a></li>
+                    <li><a href="pages/contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
+    <div class="banner-wrapper">
+        <img src="images/banner-index.png" alt="Banner principal de viagens TripWay" class="featured-banner">
+        <div class="banner-text">
+            <h2>Descubra o destino ideal para a sua próxima viagem</h2>
+        </div>
+    </div>
 
-        <section>
+    <main class="container">
+        <section class="welcome-section">
             <h2>Por onde deseja começar?</h2>
-            <img src="images/praia.jpg" alt="Praia em destaque" style="width: 100%; max-width: 300px;">
 
+            <div class="cards-container">
+                <article class="card">
+                    <h3>Destinos</h3>
+                    <p>Descubra destinos incríveis ao redor do mundo.</p>
+                    <a href="pages/destinos.html" class="btn">Explorar destinos</a>
+                </article>
 
+                <article class="card">
+                    <h3>Pacotes e serviços</h3>
+                    <p>Encontre as melhores opções de pacotes e serviços.</p>
+                    <a href="pages/pacotes.html" class="btn">Ver pacotes</a>
+                </article>
 
-            
-            <h3>Destinos</h3>
-            <p>Descubra destinos incríveis ao redor do mundo</p>
-            <a href="pages/destinos.html">Ver destinos</a>
-
-            <h3>Pacotes e serviços</h3>
-            <p>Encontre as melhores opções de pacotes e serviços</p>
-            <a href="pages/pacotes.html">Ver pacotes e serviços</a>
-
-            <h3>Contato / Reserva</h3>
-            <p>Planeje sua viagem com facilidade</p>
-            <a href="pages/contato.html">Entrar em contato</a>
+                <article class="card">
+                    <h3>Contato / Reserva</h3>
+                    <p>Planeje sua viagem com facilidade.</p>
+                    <a href="pages/contato.html" class="btn">Fazer reserva</a>
+                </article>
+            </div>
         </section>
 
-
-        <section>
+        <section class="about-section">
             <h2>Sobre a TripWay</h2>
             <p>A TripWay é especialista em criar experiências inesquecíveis. Desde 2020, ajudamos viajantes a encontrar os melhores destinos com segurança e conforto.</p>
         </section>
     </main>
 
-    <footer>
+    <footer class="main-footer">
         <p>© 2026 TripWay - Todos os direitos reservados</p>
-
     </footer>
+
 </body>
 </html>
