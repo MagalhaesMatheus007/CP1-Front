@@ -1,7 +1,7 @@
 :root {
     --primary-color: #2a9d8f;      
     --secondary-color: #70e000;    
-        --dark-color: #132a13;         
+    --dark-color: #132a13;         
     --light-color: #f4f9f4;        
     --text-color: #222222;         
     --card-bg: #ffffff;
@@ -21,7 +21,8 @@ body {
     line-height: 1.6;
 }
 
-.container {
+
+.container, body > section {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem 1rem;
@@ -32,7 +33,6 @@ a {
     color: inherit;
     transition: var(--transition-smooth);
 }
-
 
 .main-header {
     background-color: var(--dark-color);
@@ -80,15 +80,17 @@ a {
 .banner-wrapper {
     position: relative;
     width: 100%;
-    height: 40vh; 
-    overflow: hidden;
+    height: auto; 
+    overflow: visible; 
+    background-color: var(--dark-color);
 }
 
 .featured-banner {
     width: 100%;
-    height: 100%;
-    object-fit: cover; 
+    height: auto !important; 
+    display: block;
 }
+
 
 .banner-text {
     position: absolute;
@@ -96,24 +98,25 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(19, 42, 19, 0.5); 
+    background: transparent; 
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 1rem;
+    pointer-events: none;
 }
 
+
 .banner-text h2 {
-    color: #ffffff;
-    font-size: 2rem;
-    max-width: 800px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    display: none; 
 }
 
 .welcome-section, .about-section, .page-title {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     text-align: center;
+    width: 100% !important; 
+    flex: 1 1 100% !important;
 }
 
 .welcome-section h2, .about-section h2, .page-title h1 {
@@ -123,45 +126,87 @@ a {
 }
 
 
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.cards-container, 
+body {
+    --flex-display: flex;
+}
+
 .cards-container {
     display: flex;
     gap: 2rem;
     justify-content: center;
-    margin-top: 2rem;
+    flex-wrap: wrap;
 }
 
 
-.card {
+.card, 
+body > section:not(.welcome-section):not(.about-section):not(.page-title) {
     background-color: var(--card-bg);
     border-radius: 8px;
-    padding: 2rem;
-    flex: 1;
+    padding: 0;
+    flex: 1 1 300px;
     max-width: 360px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    overflow: hidden;
     text-align: center;
-    transition: var(--transition-smooth); 
+    transition: var(--transition-smooth);
+    margin: 1rem; 
 }
 
 
-.card:hover {
+@media (min-width: 769px) {
+    body {
+        display: block; 
+    }
+    
+    
+    body > section:not(.welcome-section):not(.about-section):not(.page-title) {
+        display: inline-flex;
+        vertical-align: top;
+        width: 30%;
+    }
+}
+
+.card:hover, 
+body > section:not(.welcome-section):not(.about-section):not(.page-title):hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
-.card h3 {
+.card img, 
+body > section img {
+    width: 100%;
+    height: 220px; 
+    object-fit: cover; 
+}
+
+.card h3, 
+body > section h3 {
     color: var(--dark-color);
-    margin-bottom: 1rem;
+    margin: 1.5rem 1rem 0.5rem 1rem;
 }
 
-.card p {
-    margin-bottom: 1.5rem;
+
+.card p, 
+body > section p {
+    margin: 0 1rem 2rem 1rem; 
     font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
 }
 
+.card a, 
+body > section a {
+    margin-bottom: 1.5rem;
+}
 
 .btn {
     background-color: var(--primary-color);
@@ -170,8 +215,18 @@ a {
     border-radius: 20px;
     font-weight: 600;
     display: inline-block;
+    align-self: center;
 }
 
 .btn:hover {
     background-color: var(--dark-color);
+}
+
+.main-footer {
+    background-color: var(--dark-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 4rem;
+    width: 100%;
 }
